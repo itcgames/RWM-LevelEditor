@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridLayout
+public class GridLayout_K
 {
     private int width, height;
     private float tileSize;
@@ -10,7 +10,7 @@ public class GridLayout
     private TextMesh[,] debugTextArray;
     private Vector3 origin;
 
-    public GridLayout(int t_width, int t_height, float t_tileSize, Vector3 t_origin)
+    public GridLayout_K(int t_width, int t_height, float t_tileSize, Vector3 t_origin)
     {
         width = t_width;
         height = t_height;

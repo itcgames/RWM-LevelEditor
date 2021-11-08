@@ -1,16 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GridTest : MonoBehaviour
+public class GridTest_K : MonoBehaviour
 {
-    GridLayout tile;
+    GridLayout_K tile;
     Vector3 mousePos;
     Camera mainCamera;
 
     private void Start()
     {
-        tile = new GridLayout(10, 8, 10.0f, new Vector3(-50, -40));
+        tile = new GridLayout_K(10, 8, 10.0f, new Vector3(-50, -40));
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
