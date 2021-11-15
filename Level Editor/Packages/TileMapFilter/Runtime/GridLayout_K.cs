@@ -8,6 +8,7 @@ public class GridLayout_K
     private float tileSize;
     private int[,] gridArray;
     private TextMesh[,] debugTextArray;
+    public List<Texture> textureList;
     private Vector3 origin;
 
     public GridLayout_K(int t_width, int t_height, float t_tileSize, Vector3 t_origin)
@@ -15,8 +16,7 @@ public class GridLayout_K
         width = t_width;
         height = t_height;
         tileSize = t_tileSize;
-        origin = t_origin;
-        
+        origin = t_origin;        
 
         gridArray = new int[width, height];
         debugTextArray = new TextMesh[width, height];
@@ -26,13 +26,24 @@ public class GridLayout_K
             for(int y = 0; y < gridArray.GetLength(1); y++)
             {
                 debugTextArray[x, y] = CreateWorldText(null, gridArray[x, y].ToString(), GetWorldPosition(x, y) + new Vector3(tileSize, tileSize) * 0.5f, 20, Color.green, TextAnchor.MiddleCenter);
-                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.green, 100.0f);
-                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.green, 100.0f);
+
+                textureList.Add();
+                
+                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.green, Mathf.Infinity);
+                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.green, Mathf.Infinity);
             }                  
         }
 
-        Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.green, 100.0f);
-        Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.green, 100.0f);
+        Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.green, Mathf.Infinity);
+        Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.green, Mathf.Infinity);
+    }
+
+    public void AddItemImage(SpriteRenderer image)
+    {
+        SpriteRenderer newImage = Instantiate(image);
+        newImage.sprite = image.sprite;
+        items.Add(newImage);
+        newImage.transform.position = itemBox.transform.position + new Vector3(1 * items.Count, 0, 0);
     }
 
     public void SetValue(int x, int y, int value)

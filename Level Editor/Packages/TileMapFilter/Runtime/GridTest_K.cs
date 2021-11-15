@@ -6,9 +6,12 @@ public class GridTest_K : MonoBehaviour
     Vector3 mousePos;
     Camera mainCamera;
 
+    Vector2 gridSize = new Vector2(16, 8);
+    float tileSize = 8;
+
     private void Start()
     {
-        tile = new GridLayout_K(10, 8, 10.0f, new Vector3(-50, -40));
+        tile = new GridLayout_K((int)gridSize.x, (int)gridSize.y, tileSize, new Vector3(((int)-gridSize.x * tileSize) / 2, ((int)-gridSize.y * tileSize) / 2));
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 

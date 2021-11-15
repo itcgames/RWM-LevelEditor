@@ -1,0 +1,9 @@
+Order of things necessary:
+
+- I need the user to be able to drag and drop textures to a 
+  list of textures.
+
+- I need to be able to pass an image to a coroutine.
+
+- The coroutine changes the image in the tile that was 
+  selected by the user.
