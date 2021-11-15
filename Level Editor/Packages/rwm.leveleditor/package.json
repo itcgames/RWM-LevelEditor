@@ -1,5 +1,5 @@
 {
-    "name": "tilemapfilter",
+    "name": "rwm.leveleditor",
     "version": "0.1.0",
     "displayName": "TileMap",
     "description": "A grid that holds values in each tile",

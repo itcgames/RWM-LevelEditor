@@ -27,7 +27,7 @@ public class GridLayout_K
             {
                 debugTextArray[x, y] = CreateWorldText(null, gridArray[x, y].ToString(), GetWorldPosition(x, y) + new Vector3(tileSize, tileSize) * 0.5f, 20, Color.green, TextAnchor.MiddleCenter);
 
-                textureList.Add();
+                //textureList.Add();
                 
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.green, Mathf.Infinity);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.green, Mathf.Infinity);
@@ -38,13 +38,13 @@ public class GridLayout_K
         Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.green, Mathf.Infinity);
     }
 
-    public void AddItemImage(SpriteRenderer image)
-    {
-        SpriteRenderer newImage = Instantiate(image);
-        newImage.sprite = image.sprite;
-        items.Add(newImage);
-        newImage.transform.position = itemBox.transform.position + new Vector3(1 * items.Count, 0, 0);
-    }
+    //public void AddItemImage(SpriteRenderer image)
+    //{
+    //    SpriteRenderer newImage = Instantiate(image);
+    //    newImage.sprite = image.sprite;
+    //    items.Add(newImage);
+    //    newImage.transform.position = itemBox.transform.position + new Vector3(1 * items.Count, 0, 0);
+    //}
 
     public void SetValue(int x, int y, int value)
     {
