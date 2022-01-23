@@ -72,7 +72,7 @@
       "dependencies": {}
     },
     "com.unity.collab-proxy": {
-      "version": "1.12.5",
+      "version": "1.10.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -157,12 +157,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "tilemapfilter": {
-      "version": "file:TileMapFilter",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
